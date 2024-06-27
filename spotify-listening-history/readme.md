@@ -39,4 +39,4 @@ cards:
     title: Hörverlauf
 ```
 
-![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/3.pn)
+![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/3.png)
