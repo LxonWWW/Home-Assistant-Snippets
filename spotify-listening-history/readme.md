@@ -19,11 +19,11 @@ Create a new (local) calendar named "spotify_song_list".
 
 ![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/2.png)
 
-### Step 3
+### Step 4
 
 Replace all "spotify_YOUR_NAME" in "spotify_listening_history.yaml" and paste it into a new automation.
 
-### Step 4
+### Step 5
 
 Create a new dasboard as a panel and subview and paste the following code there:
 
@@ -40,3 +40,9 @@ cards:
 ```
 
 ![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/3.png)
+
+### Final step
+
+Now trigger the "spotify_track_info" helper via your favourite voice assistant like Google Home, Siri or Alexa.
+You will always get a response when something is playing via Spotify. Even if it doesn't play via your smart speaker.
+You can always check the song you requested the name of in your calendar.
