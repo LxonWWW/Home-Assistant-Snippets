@@ -1,7 +1,7 @@
 # Home Assistant Spotify listening History
 `"Home Assistant, whats this song?"`
 
-![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/4.png)
+![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/5.png)
 
 ### Step 1
 
