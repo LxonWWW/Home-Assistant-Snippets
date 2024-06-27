@@ -1,0 +1,56 @@
+alias: When Spotify playback title requested
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - input_boolean.spotify_track_info
+    to: "on"
+condition: []
+action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - if:
+      - condition: state
+        entity_id: media_player.spotify_YOUR_NAME
+        state: playing
+    then:
+      - service: tts.cloud_say
+        data:
+          cache: false
+          entity_id: media_player.wohnzimmer
+          message: >-
+            This is {{ state_attr('media_player.spotify_leon_dierkes',
+            'media_title') }} from {{
+            state_attr('media_player.spotify_YOUR_NAME', 'media_artist') }},
+            auf dem Gerät: {{ state_attr('media_player.spotify_YOUR_NAME',
+            'source') }}. I have saved the song in the list of requested songs.
+          language: de-DE
+      - service: calendar.create_event
+        data:
+          summary: >-
+            {{ state_attr('media_player.spotify_YOUR_NAME', 'media_title') }}
+            - {{ state_attr('media_player.spotify_YOUR_NAME', 'media_artist')
+            }}
+          description: >-
+            https://open.spotify.com/intl-de/track/{{
+            state_attr('media_player.spotify_YOUR_NAME',
+            'media_content_id').split(':')[2] }}
+          end_date_time: "{{ (now() | string).split('.')[0] }}"
+          start_date_time: "{{ (now() | string).split('.')[0] }}"
+        target:
+          entity_id: calendar.spotify_song_list
+    else:
+      - service: tts.cloud_say
+        data:
+          cache: false
+          entity_id: media_player.wohnzimmer
+          message: Nothing is currently playing.
+          language: de-DE
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id: input_boolean.spotify_track_info
+mode: single
