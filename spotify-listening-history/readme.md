@@ -11,13 +11,13 @@ Set-up your Spotify integration here: https://www.home-assistant.io/integrations
 
 Create a input_boolean at your helpers called "spotify_track_info". (http://homeassistant.local:8123/config/helpers)
 
-![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/1.png)
+![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/1.pn)
 
 ### Step 3
 
 Create a new (local) calendar named "spotify_song_list".
 
-![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/2.png)
+![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/2.pn)
 
 ### Step 3
 
@@ -39,4 +39,4 @@ cards:
     title: Hörverlauf
 ```
 
-![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/3.png)
+![](https://raw.githubusercontent.com/LxonWWW/Home-Assistant-Snippets/main/spotify-listening-history/3.pn)
